@@ -8,7 +8,7 @@ import java.io.InputStream
  * @param columnNumber default 1, optional
  * @param sheetNumber default first sheet, optional
  */
-fun getPrimesFromExcel(file: InputStream, columnNumber: Int = 1, sheetNumber: Int = 0) {
+fun printPrimesFromExcel(file: InputStream, columnNumber: Int = 1, sheetNumber: Int = 0) {
     val xlWb = WorkbookFactory.create(file)
     val xlWs = xlWb.getSheetAt(sheetNumber)
 
@@ -49,5 +49,5 @@ fun main(args: Array<String>) {
         loadExcelFile(argsFilePath)
     }
 
-    getPrimesFromExcel(file)
+    printPrimesFromExcel(file)
 }
